@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Feliz Cumpleaños, Mi Amor! 🎂</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe0f0 0%, #ffd6e7 50%, #ffb3d1 100%);
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #5a1a3a;
+    }
+
+    /* ── Falling hearts animation ── */
+    .hearts {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
+      top: -40px;
+      font-size: 1.6rem;
+      animation: fall linear infinite;
+      opacity: 0.7;
+    }
+    .heart:nth-child(1)  { left:  5%; animation-duration: 6s;  animation-delay: 0s;   }
+    .heart:nth-child(2)  { left: 15%; animation-duration: 8s;  animation-delay: 1s;   }
+    .heart:nth-child(3)  { left: 25%; animation-duration: 5s;  animation-delay: 2s;   }
+    .heart:nth-child(4)  { left: 35%; animation-duration: 7s;  animation-delay: 0.5s; }
+    .heart:nth-child(5)  { left: 45%; animation-duration: 9s;  animation-delay: 1.5s; }
+    .heart:nth-child(6)  { left: 55%; animation-duration: 6s;  animation-delay: 3s;   }
+    .heart:nth-child(7)  { left: 65%; animation-duration: 8s;  animation-delay: 0.8s; }
+    .heart:nth-child(8)  { left: 75%; animation-duration: 5s;  animation-delay: 2.5s; }
+    .heart:nth-child(9)  { left: 85%; animation-duration: 7s;  animation-delay: 1.2s; }
+    .heart:nth-child(10) { left: 95%; animation-duration: 6s;  animation-delay: 0.3s; }
+    @keyframes fall {
+      0%   { top: -40px; transform: rotate(0deg); }
+      100% { top: 110vh;  transform: rotate(360deg); }
+    }
+
+    /* ── Card ── */
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 24px;
+      padding: 50px 40px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(180, 0, 80, 0.18);
+    }
+
+    /* ── Header ── */
+    .emoji-row { font-size: 2.8rem; letter-spacing: 8px; margin-bottom: 16px; }
+
+    h1 {
+      font-size: 2.4rem;
+      color: #c0006a;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #9b3060;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #f48fb1, transparent);
+      margin: 24px 0;
+    }
+
+    /* ── Message ── */
+    .message {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #5a1a3a;
+      margin-bottom: 32px;
+    }
+
+    /* ── Photo gallery ── */
+    .gallery-title {
+      font-size: 1.4rem;
+      color: #c0006a;
+      margin-bottom: 18px;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .photo-frame {
+      width: 260px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 4px solid #f48fb1;
+      box-shadow: 0 4px 16px rgba(180, 0, 80, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .photo-frame:hover {
+      transform: scale(1.04) rotate(-1deg);
+      box-shadow: 0 8px 28px rgba(180, 0, 80, 0.3);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-caption {
+      background: #fce4ec;
+      padding: 8px;
+      font-size: 0.9rem;
+      color: #9b3060;
+      font-style: italic;
+    }
+
+    /* ── Footer signature ── */
+    .signature {
+      font-size: 1.2rem;
+      color: #c0006a;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .footer-hearts { font-size: 1.8rem; margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- Falling hearts in background -->
+  <div class="hearts" aria-hidden="true">
+    <span class="heart">💗</span>
+    <span class="heart">🌸</span>
+    <span class="heart">💕</span>
+    <span class="heart">🌷</span>
+    <span class="heart">💖</span>
+    <span class="heart">🌸</span>
+    <span class="heart">💗</span>
+    <span class="heart">💝</span>
+    <span class="heart">🌺</span>
+    <span class="heart">💞</span>
+  </div>
+
+  <div class="card">
+    <div class="emoji-row">🎂 🎉 🌸 🎁 💕</div>
+
+    <h1>¡Feliz Cumpleaños,<br>Mi Amor!</h1>
+    <p class="subtitle">Hoy es el día más especial del año 💖</p>
+
+    <hr class="divider" />
+
+    <p class="message">
+      Cada día a tu lado es un regalo que atesoro con todo mi corazón. 
+      Eres la luz que ilumina mis días, la sonrisa que alegra mis mañanas 
+      y la persona que hace que todo valga la pena. 🌹<br /><br />
+      En este día tan especial quiero que sepas cuánto te amo y lo 
+      afortunado que me siento de tenerte en mi vida. 
+      ¡Que todos tus sueños se hagan realidad! 🌟<br /><br />
+      <strong>¡Feliz cumpleaños, princesa! 🎀</strong>
+    </p>
+
+    <hr class="divider" />
+
+    <!-- ────────────────────────────────────────────────
+         SECCIÓN DE FOTOS
+         Reemplaza "imagen1.jpg" e "imagen2.jpg" con las
+         rutas o URLs de tus imágenes al subirlas.
+    ──────────────────────────────────────────────── -->
+    <p class="gallery-title">📸 Nuestros Momentos Especiales</p>
+
+    <div class="gallery">
+      <!-- Foto 1 -->
+      <div class="photo-frame">
+        <img src="imagen1.jpg" alt="Foto especial 1" />
+        <div class="photo-caption">✨ Un recuerdo hermoso</div>
+      </div>
+
+      <!-- Foto 2 -->
+      <div class="photo-frame">
+        <img src="imagen2.jpg" alt="Foto especial 2" />
+        <div class="photo-caption">💑 Juntos para siempre</div>
+      </div>
+    </div>
+    <!-- ── Fin sección de fotos ── -->
+
+    <p class="signature">Con todo mi amor, siempre tuyo 💌</p>
+    <div class="footer-hearts">💗 💗 💗</div>
+  </div>
+
+</body>
+</html>
