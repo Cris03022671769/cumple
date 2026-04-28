@@ -15,7 +15,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
       color: #5a1a3a;
     }
 
@@ -33,7 +33,7 @@
       top: -40px;
       font-size: 1.6rem;
       animation: fall linear infinite;
-      opacity: 0.7;
+      opacity: 0.75;
     }
     .heart:nth-child(1)  { left:  5%; animation-duration: 6s;  animation-delay: 0s;   }
     .heart:nth-child(2)  { left: 15%; animation-duration: 8s;  animation-delay: 1s;   }
@@ -54,30 +54,35 @@
     .card {
       position: relative;
       z-index: 1;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(6px);
-      border-radius: 24px;
-      padding: 50px 40px;
-      max-width: 700px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 28px;
+      padding: 50px 44px;
+      max-width: 720px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 8px 32px rgba(180, 0, 80, 0.18);
+      box-shadow: 0 8px 40px rgba(180, 0, 80, 0.2);
     }
 
     /* ── Header ── */
-    .emoji-row { font-size: 2.8rem; letter-spacing: 8px; margin-bottom: 16px; }
+    .emoji-row {
+      font-size: 2.6rem;
+      letter-spacing: 8px;
+      margin-bottom: 18px;
+    }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       color: #c0006a;
-      line-height: 1.2;
-      margin-bottom: 8px;
+      line-height: 1.25;
+      margin-bottom: 10px;
     }
 
     .subtitle {
       font-size: 1.1rem;
       color: #9b3060;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       font-style: italic;
     }
 
@@ -86,55 +91,55 @@
       border: none;
       height: 2px;
       background: linear-gradient(to right, transparent, #f48fb1, transparent);
-      margin: 24px 0;
+      margin: 26px 0;
     }
 
     /* ── Message ── */
     .message {
       font-size: 1.15rem;
-      line-height: 1.8;
+      line-height: 1.9;
       color: #5a1a3a;
-      margin-bottom: 32px;
+      margin-bottom: 10px;
     }
 
     /* ── Photo gallery ── */
     .gallery-title {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       color: #c0006a;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .gallery {
       display: flex;
-      gap: 20px;
+      gap: 24px;
       justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 36px;
     }
 
     .photo-frame {
-      width: 260px;
-      border-radius: 16px;
+      width: 280px;
+      border-radius: 18px;
       overflow: hidden;
       border: 4px solid #f48fb1;
-      box-shadow: 0 4px 16px rgba(180, 0, 80, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(180, 0, 80, 0.18);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
     .photo-frame:hover {
       transform: scale(1.04) rotate(-1deg);
-      box-shadow: 0 8px 28px rgba(180, 0, 80, 0.3);
+      box-shadow: 0 10px 32px rgba(180, 0, 80, 0.32);
     }
 
     .photo-frame img {
       width: 100%;
-      height: 260px;
+      height: 280px;
       object-fit: cover;
       display: block;
     }
 
     .photo-caption {
       background: #fce4ec;
-      padding: 8px;
+      padding: 10px 8px;
       font-size: 0.9rem;
       color: #9b3060;
       font-style: italic;
@@ -145,10 +150,22 @@
       font-size: 1.2rem;
       color: #c0006a;
       font-weight: bold;
-      margin-top: 8px;
+      margin-top: 6px;
     }
 
-    .footer-hearts { font-size: 1.8rem; margin-top: 12px; }
+    .footer-hearts {
+      font-size: 1.8rem;
+      margin-top: 14px;
+      letter-spacing: 6px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .card { padding: 36px 22px; }
+      h1 { font-size: 1.9rem; }
+      .photo-frame { width: 100%; }
+      .photo-frame img { height: 220px; }
+    }
   </style>
 </head>
 <body>
@@ -176,38 +193,30 @@
     <hr class="divider" />
 
     <p class="message">
-      Cada día a tu lado es un regalo que atesoro con todo mi corazón. 
-      Eres la luz que ilumina mis días, la sonrisa que alegra mis mañanas 
+      Cada día a tu lado es un regalo que atesoro con todo mi corazón.
+      Eres la luz que ilumina mis días, la sonrisa que alegra mis mañanas
       y la persona que hace que todo valga la pena. 🌹<br /><br />
-      En este día tan especial quiero que sepas cuánto te amo y lo 
-      afortunado que me siento de tenerte en mi vida. 
+      En este día tan especial quiero que sepas cuánto te amo y lo
+      afortunado que me siento de tenerte en mi vida.
       ¡Que todos tus sueños se hagan realidad! 🌟<br /><br />
       <strong>¡Feliz cumpleaños, princesa! 🎀</strong>
     </p>
 
     <hr class="divider" />
 
-    <!-- ────────────────────────────────────────────────
-         SECCIÓN DE FOTOS
-         Reemplaza "imagen1.jpg" e "imagen2.jpg" con las
-         rutas o URLs de tus imágenes al subirlas.
-    ──────────────────────────────────────────────── -->
     <p class="gallery-title">📸 Nuestros Momentos Especiales</p>
 
     <div class="gallery">
-      <!-- Foto 1 -->
       <div class="photo-frame">
-        <img src="imagen1.jpg" alt="Foto especial 1" />
-        <div class="photo-caption">✨ Un recuerdo hermoso</div>
+        <img src="Birthday.png" alt="Feliz cumpleaños" />
+        <div class="photo-caption">🎂 ¡Que viva la cumpleañera!</div>
       </div>
 
-      <!-- Foto 2 -->
       <div class="photo-frame">
-        <img src="imagen2.jpg" alt="Foto especial 2" />
+        <img src="happy.png" alt="Momentos felices juntos" />
         <div class="photo-caption">💑 Juntos para siempre</div>
       </div>
     </div>
-    <!-- ── Fin sección de fotos ── -->
 
     <p class="signature">Con todo mi amor, siempre tuyo 💌</p>
     <div class="footer-hearts">💗 💗 💗</div>
