@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz Cumple, Gloria</title>
+    <meta
+      name="description"
+      content="Página de felicitación para Gloria con contador hacia el 1 de mayo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <div class="ribbon">TAURO</div>
+
+        <div class="image-stack" aria-label="Happy birthday">
+          <img src="happy.png" alt="Happy" class="stack-image happy" />
+          <img src="Birthday.png" alt="Birthday" class="stack-image birthday" />
+        </div>
+
+        <div class="taurus-visual" aria-label="Constelación de Tauro">
+          <svg viewBox="0 0 620 250" role="img" aria-hidden="true">
+            <g class="constellation-lines">
+              <line x1="70" y1="52" x2="214" y2="188" />
+              <line x1="74" y1="108" x2="198" y2="188" />
+              <line x1="198" y1="188" x2="305" y2="196" />
+              <line x1="305" y1="196" x2="387" y2="148" />
+              <line x1="387" y1="148" x2="513" y2="154" />
+              <line x1="513" y1="154" x2="536" y2="188" />
+            </g>
+            <g class="constellation-stars">
+              <circle class="star-core" cx="70" cy="52" r="6" />
+              <circle class="star-core" cx="74" cy="108" r="5" />
+              <circle class="star-core" cx="214" cy="188" r="6" />
+              <circle class="star-core" cx="198" cy="188" r="5" />
+              <circle class="star-core" cx="305" cy="196" r="6" />
+              <circle class="star-core" cx="387" cy="148" r="11" />
+              <circle class="star-core" cx="513" cy="154" r="4" />
+              <circle class="star-core" cx="536" cy="188" r="6" />
+              <circle class="star-core" cx="245" cy="135" r="2.5" />
+              <circle class="star-core" cx="258" cy="145" r="2.5" />
+              <circle class="star-core" cx="264" cy="159" r="2.5" />
+              <circle class="star-core" cx="278" cy="171" r="2.5" />
+            </g>
+            <text x="310" y="236" text-anchor="middle">TAURUS</text>
+          </svg>
+        </div>
+
+        <p class="subtitle">GLORIA · 01.05.2005</p>
+
+        <h1>HAPPY BIRTHDAY</h1>
+
+        <p class="message">Cuenta regresiva para el cumpleaños de Gloria</p>
+
+        <div class="countdown" aria-live="polite">
+          <div class="time-box">
+            <span id="days">--</span>
+            <label>días</label>
+          </div>
+          <div class="time-box">
+            <span id="hours">--</span>
+            <label>horas</label>
+          </div>
+          <div class="time-box">
+            <span id="minutes">--</span>
+            <label>minutos</label>
+          </div>
+          <div class="time-box">
+            <span id="seconds">--</span>
+            <label>segundos</label>
+          </div>
+        </div>
+
+        <section class="memories" aria-label="Recuerdos juntos">
+          <h2>Recuerdos juntos</h2>
+          <div class="memories-grid">
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564649_y.jpg" data-full="photo_5154653439395564649_y.jpg" alt="Recuerdo 1" loading="lazy" />
+            </figure>
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564650_y.jpg" data-full="photo_5154653439395564650_y.jpg" alt="Recuerdo 2" loading="lazy" />
+            </figure>
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564651_y.jpg" data-full="photo_5154653439395564651_y.jpg" alt="Recuerdo 3" loading="lazy" />
+            </figure>
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564652_y.jpg" data-full="photo_5154653439395564652_y.jpg" alt="Recuerdo 4" loading="lazy" />
+            </figure>
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564653_y.jpg" data-full="photo_5154653439395564653_y.jpg" alt="Recuerdo 5" loading="lazy" />
+            </figure>
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564654_y.jpg" data-full="photo_5154653439395564654_y.jpg" alt="Recuerdo 6" loading="lazy" />
+            </figure>
+            <figure class="memory-item">
+              <img class="memory-thumb" src="photo_5154653439395564655_y.jpg" data-full="photo_5154653439395564655_y.jpg" alt="Recuerdo 7" loading="lazy" />
+            </figure>
+          </div>
+        </section>
+
+        <!-- Decorative mushrooms (purely visual) -->
+        <div class="decor-mushrooms" aria-hidden="true">
+          <svg class="mushroom mushroom-1" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><g><ellipse cx="60" cy="40" rx="36" ry="20" fill="#ff6578"/><rect x="56" y="40" width="8" height="36" fill="#7a523a" rx="3"/></g></svg>
+          <svg class="mushroom mushroom-2" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><g><ellipse cx="60" cy="44" rx="26" ry="14" fill="#ffb380"/><rect x="58" y="44" width="6" height="30" fill="#6b3f2d" rx="3"/></g></svg>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox for memories -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Cerrar">✕</button>
+      <button class="lb-prev" aria-label="Anterior">‹</button>
+      <img class="lightbox-img" src="" alt="" />
+      <button class="lb-next" aria-label="Siguiente">›</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
